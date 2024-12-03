@@ -11,7 +11,7 @@
             animation: gradientShift 10s ease infinite;
             display: flex;
             justify-content: center;
-            align-items: center; /* Modificado para centralizar verticalmente */
+            align-items: center; /* Centraliza vertical e horizontal */
             min-height: 100vh;
             margin: 0;
             font-family: Arial, sans-serif;
@@ -38,15 +38,15 @@
             padding: 20px;
             border-radius: 10px;
             max-width: 90%;
-            text-align: center;
-            box-sizing: border-box;
             width: 100%;
             max-width: 500px;
             margin: 20px auto;
             position: relative;
             display: flex;
             flex-direction: column;
-            align-items: center; /* Garantir que os itens dentro da container fiquem centralizados */
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
         }
 
         .slideshow {
@@ -255,7 +255,7 @@
         <button id="loveButton">Clique aqui</button>
 
         <div class="video-container">
-            <video id="myVideo" controls autoplay muted>
+            <video id="myVideo" controls autoplay>
                 <source src="video/vida.mp4" type="video/mp4">
                 Seu navegador não suporta o elemento de vídeo.
             </video>
@@ -272,14 +272,13 @@
         const video = document.getElementById('myVideo');
 
         loveButton.addEventListener('click', () => {
-            alert('Eu te amo, muitoooooooooo!❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​');
-            romanticText.style.display = 'block';  // Exibe o texto romântico com animação
+            alert('Eu te amo, muitoooooooooo!❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​');
+            romanticText.style.display = 'block';
         });
 
-        // Iniciar o vídeo e saltar para 13 segundos
         window.onload = () => {
-            video.currentTime = 13;  // Salta diretamente para 13 segundos
-            video.play();  // Inicia o vídeo com áudio
+            video.currentTime = 13;
+            video.play();
         };
     </script>
 </body>
