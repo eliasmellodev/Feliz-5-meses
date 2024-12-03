@@ -9,13 +9,14 @@
             background: linear-gradient(to bottom, #ffcccc, #ff99cc);
             display: flex;
             justify-content: center;
-            align-items: center;
-            height: 100vh;
+            align-items: flex-start;
+            min-height: 100vh;
             margin: 0;
             font-family: Arial, sans-serif;
             color: white;
             text-align: center;
-            overflow: hidden;
+            flex-direction: column;
+            overflow-y: auto;
         }
         .container {
             background: rgba(0, 0, 0, 0.5);
@@ -23,6 +24,10 @@
             border-radius: 10px;
             max-width: 90%;
             text-align: center;
+            box-sizing: border-box;
+            width: 100%;
+            max-width: 500px;
+            margin: 20px auto;
         }
         .slideshow {
             position: relative;
