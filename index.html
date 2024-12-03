@@ -9,26 +9,34 @@
             background: linear-gradient(to bottom, #ffcccc, #ff99cc);
             display: flex;
             justify-content: center;
-            align-items: center;
-            height: 100vh;
+            align-items: flex-start; /* Alinha o conteúdo no topo */
+            min-height: 100vh; /* Garante que o conteúdo ocupe pelo menos 100% da altura da tela */
             margin: 0;
             font-family: Arial, sans-serif;
             color: white;
             text-align: center;
-            overflow: hidden;
+            flex-direction: column; /* Permite que o conteúdo se organize verticalmente */
         }
         .container {
             background: rgba(0, 0, 0, 0.5);
             padding: 20px;
             border-radius: 10px;
-            max-width: 600px;
+            max-width: 90%;
             text-align: center;
+            box-sizing: border-box;
+            width: 100%;
+            max-width: 500px;
+            margin-top: 20px; /* Garante que o conteúdo não fique colado ao topo da tela */
         }
         .slideshow {
             position: relative;
             width: 200px;
             height: 200px;
             margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
         }
         .slideshow img {
             width: 100%;
@@ -37,6 +45,7 @@
             position: absolute;
             opacity: 0;
             animation: slide 30s infinite;
+            object-fit: cover;
         }
         .slideshow img:nth-child(1) { animation-delay: 0s; }
         .slideshow img:nth-child(2) { animation-delay: 5s; }
@@ -70,9 +79,19 @@
             margin: 10px 2px;
             cursor: pointer;
             border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .container button:hover {
+            background-color: #ff1493;
         }
         .video-container {
             margin: 20px 0;
+        }
+        .video-container iframe {
+            width: 100%;
+            height: auto;
+            max-width: 560px;
+            aspect-ratio: 16/9;
         }
         .balloons {
             position: absolute;
@@ -107,6 +126,24 @@
             50% { transform: translateY(-200px); }
             100% { transform: translateY(0); }
         }
+
+        /* Responsividade para dispositivos móveis */
+        @media (max-width: 600px) {
+            .container h1 {
+                font-size: 1.8em;
+            }
+            .container p {
+                font-size: 1em;
+            }
+            .container button {
+                font-size: 0.9em;
+                padding: 8px 16px;
+            }
+            .slideshow {
+                width: 150px;
+                height: 150px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -124,7 +161,7 @@
         <p>Obrigado por estar ao meu lado. Cada momento com você é especial.</p>
         <button onclick="alert('Te amo!')">Clique aqui</button>
         <div class="video-container">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/SEU_VIDEO" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/SEU_VIDEO" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         <p>Vamos continuar criando memórias incríveis juntos. Te amo muito!</p>
     </div>
