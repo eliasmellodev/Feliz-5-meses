@@ -1,6 +1,6 @@
 // script.js
 
-// Configuração do carrossel
+// Carrossel de imagens
 let currentIndex = 0;
 const images = document.querySelectorAll(".carousel-images img");
 const totalImages = images.length;
@@ -8,12 +8,13 @@ const totalImages = images.length;
 function showNextImage() {
     const carousel = document.querySelector(".carousel-images");
     currentIndex = (currentIndex + 1) % totalImages;
-    carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+    const offset = -currentIndex * 100; // Move proporcionalmente
+    carousel.style.transform = `translateX(${offset}%)`;
 }
 
 setInterval(showNextImage, 3000);
 
-// Animação dos balões
+// Balões animados
 function createBalloon() {
     const balloon = document.createElement('div');
     balloon.classList.add('balloon');
@@ -26,7 +27,7 @@ function createBalloon() {
 
     setTimeout(() => {
         balloon.remove();
-    }, 10000);
+    }, 10000); // Remover após 10 segundos
 }
 
 setInterval(createBalloon, 500);
