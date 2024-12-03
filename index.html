@@ -21,8 +21,9 @@
             background: rgba(0, 0, 0, 0.5);
             padding: 20px;
             border-radius: 10px;
-            max-width: 600px;
+            max-width: 90%;
             text-align: center;
+            box-sizing: border-box;
         }
         .slideshow {
             position: relative;
@@ -74,6 +75,12 @@
         .video-container {
             margin: 20px 0;
         }
+        .video-container iframe {
+            width: 100%;
+            height: auto;
+            max-width: 560px;
+            aspect-ratio: 16/9;
+        }
         .balloons {
             position: absolute;
             top: 0;
@@ -124,7 +131,7 @@
         <p>Obrigado por estar ao meu lado. Cada momento com você é especial.</p>
         <button onclick="alert('Te amo!')">Clique aqui</button>
         <div class="video-container">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/SEU_VIDEO" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/SEU_VIDEO" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         <p>Vamos continuar criando memórias incríveis juntos. Te amo muito!</p>
     </div>
