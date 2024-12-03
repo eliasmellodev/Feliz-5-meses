@@ -1,0 +1,90 @@
+/* styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #ffcccc, #ffe6e6);
+    color: #333;
+}
+
+.header {
+    text-align: center;
+    padding: 20px;
+    background: #ff99cc;
+    color: white;
+}
+
+main {
+    padding: 20px;
+}
+
+.text-section, .photos-section, .animations, .buttons-section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    text-align: center;
+    color: #ff3366;
+}
+
+.photo-gallery {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.photo-gallery img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hearts {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.heart {
+    width: 50px;
+    height: 50px;
+    background: pink;
+    clip-path: polygon(50% 0%, 100% 50%, 75% 100%, 50% 75%, 25% 100%, 0% 50%);
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background: #ff6699;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #ff3366;
+}
+
+.footer {
+    text-align: center;
+    padding: 10px;
+    background: #ff99cc;
+    color: white;
+}
