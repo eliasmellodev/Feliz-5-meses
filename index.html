@@ -237,8 +237,10 @@
             <div class="balloon" style="left: 70%; animation-delay: 7s;"></div>
             <div class="balloon" style="left: 90%; animation-delay: 9s;"></div>
         </div>
+        <div>🎈​🎈​🎉​🎉🎉🎉🎉🎉🎉🎉🎉🎉​🎉🎉🎉🎉🎈​🎈​</div>
         <h1>Feliz 5 Meses, meu denguinho!</h1>
-        <p>Meu amor, hoje comemoramos cinco meses dessa história tão linda que estamos construindo juntos. Cada momento ao seu lado tem sido como um capítulo de um livro que eu jamais quero parar de escrever. Você trouxe luz para a minha vida, fez meu coração acreditar novamente no amor, e todos os dias me ensina o verdadeiro significado de ser feliz. Quero que saiba que você é tudo para mim, meu porto seguro, meu sorriso favorito. Que venham muitos e muitos meses, porque com você eu sei que posso enfrentar qualquer coisa. Eu te amo, minha vida.</p>
+        <div>🎈​🎈​🎉​🎉​🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎈​🎈​</div>
+        <p>Meu amor, hoje comemoramos cinco meses dessa história tão linda que estamos construindo juntos. Cada momento ao seu lado tem sido como um capítulo de um livro que eu jamais quero parar de escrever. Você trouxe luz para a minha vida, fez meu coração acreditar novamente no amor, e todos os dias me ensina o verdadeiro significado de ser feliz. Quero que saiba que você é tudo para mim, meu porto seguro, meu sorriso favorito. Que venham muitos e muitos meses, porque com você eu sei que posso enfrentar qualquer coisa. Eu te amo, minha vida. ❤️​</p>
 
         <div class="slideshow">
             <img src="images/foto1.jpg" alt="Foto 1">
@@ -249,29 +251,36 @@
             <img src="images/foto6.jpg" alt="Foto 6">
         </div>
 
-        <p>Obrigado por estar ao meu lado. Cada momento com você é especial.</p>
+        <p>Obrigado por estar ao meu lado. Cada momento com você é especial. ❤️​🥰​😍​😍​😍​🥰​🥰​🥰​</p>
         <button id="loveButton">Clique aqui</button>
 
         <div class="video-container">
-            <video controls>
+            <video id="myVideo" controls>
                 <source src="video/vida.mp4" type="video/mp4">
                 Seu navegador não suporta o elemento de vídeo.
             </video>
         </div>
 
         <div class="romantic-text" id="romanticText">
-            <p>Denguinho, cinco meses podem parecer pouco, mas para mim representam o início do “para sempre” que eu tanto sonhei ao seu lado. Você é meu refúgio, minha paz, o amor que dá sentido aos meus dias. Quero que se sinta amada, porque você é a mulher mais incrível que eu já conheci. Sempre que penso em nós, vejo um futuro cheio de amor, cumplicidade e felicidade. Obrigado por ser quem você é e por me deixar fazer parte da sua vida. Eu te amo mais do que palavras podem dizer, e espero que sinta todo esse amor em cada gesto meu. Você é meu maior presente.</p>
+            <p>Denguinho, cinco meses podem parecer pouco, mas para mim representam o início do “para sempre” que eu tanto sonhei ao seu lado. Você é meu refúgio, minha paz, o amor que dá sentido aos meus dias. Quero que se sinta amada, porque você é a mulher mais incrível que eu já conheci. Sempre que penso em nós, vejo um futuro cheio de amor, cumplicidade e felicidade. Obrigado por ser quem você é e por me deixar fazer parte da sua vida. Eu te amo mais do que palavras podem dizer, e espero que sinta todo esse amor em cada gesto meu. Você é meu maior presente. ❤️​❤️​🥰​</p>
         </div>
     </div>
 
     <script>
         const loveButton = document.getElementById('loveButton');
         const romanticText = document.getElementById('romanticText');
+        const video = document.getElementById('myVideo');
 
         loveButton.addEventListener('click', () => {
-            alert('Eu te amo, muitoooooooooo!');
+            alert('Eu te amo, muitoooooooooo!❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​❤️​🥰​');
             romanticText.style.display = 'block';  // Exibe o texto romântico com animação
         });
+
+        // Iniciar o vídeo e saltar para 13 segundos
+        window.onload = () => {
+            video.currentTime = 13;  // Salta diretamente para 13 segundos
+            video.play();  // Inicia o vídeo com áudio
+        };
     </script>
 </body>
 </html>
