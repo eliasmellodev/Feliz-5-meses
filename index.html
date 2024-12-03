@@ -6,8 +6,7 @@
     <title>Feliz 5 Meses de Namoro</title>
     <style>
         body {
-            background: url('https://example.com/fundo-animado-romantico.gif') no-repeat center center fixed;
-            background-size: cover;
+            background: linear-gradient(to bottom, #ffcccc, #ff99cc);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -16,11 +15,14 @@
             font-family: Arial, sans-serif;
             color: white;
             text-align: center;
+            overflow: hidden;
         }
         .container {
             background: rgba(0, 0, 0, 0.5);
             padding: 20px;
             border-radius: 10px;
+            max-width: 600px;
+            text-align: center;
         }
         .slideshow {
             position: relative;
@@ -34,12 +36,14 @@
             border-radius: 50%;
             position: absolute;
             opacity: 0;
-            animation: slide 20s infinite;
+            animation: slide 30s infinite;
         }
         .slideshow img:nth-child(1) { animation-delay: 0s; }
         .slideshow img:nth-child(2) { animation-delay: 5s; }
         .slideshow img:nth-child(3) { animation-delay: 10s; }
         .slideshow img:nth-child(4) { animation-delay: 15s; }
+        .slideshow img:nth-child(5) { animation-delay: 20s; }
+        .slideshow img:nth-child(6) { animation-delay: 25s; }
         @keyframes slide {
             0% { opacity: 0; }
             20% { opacity: 1; }
@@ -67,6 +71,9 @@
             cursor: pointer;
             border-radius: 5px;
         }
+        .video-container {
+            margin: 20px 0;
+        }
         .balloons {
             position: absolute;
             top: 0;
@@ -81,9 +88,19 @@
             bottom: -100px;
             width: 50px;
             height: 70px;
-            background: url('https://example.com/balao.png') no-repeat center center;
-            background-size: contain;
+            background: pink;
+            border-radius: 50%;
             animation: float 10s infinite ease-in-out;
+        }
+        .balloon::before {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            width: 2px;
+            height: 20px;
+            background: pink;
+            transform: translateX(-50%);
         }
         @keyframes float {
             0% { transform: translateY(0); }
@@ -101,8 +118,15 @@
             <img src="images/foto2.jpg" alt="Foto 2">
             <img src="images/foto3.jpg" alt="Foto 3">
             <img src="images/foto4.jpg" alt="Foto 4">
+            <img src="images/foto5.jpg" alt="Foto 5">
+            <img src="images/foto6.jpg" alt="Foto 6">
         </div>
+        <p>Obrigado por estar ao meu lado. Cada momento com você é especial.</p>
         <button onclick="alert('Te amo!')">Clique aqui</button>
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/SEU_VIDEO" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <p>Vamos continuar criando memórias incríveis juntos. Te amo muito!</p>
     </div>
     <div class="balloons">
         <div class="balloon" style="left: 10%; animation-delay: 0s;"></div>
