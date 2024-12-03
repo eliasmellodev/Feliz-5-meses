@@ -23,14 +23,15 @@ body {
     border-radius: 0 0 20px 20px;
 }
 
-.text-section, .photos-carousel, .animations, .buttons-section {
+.text-section, .photos-carousel, .buttons-section {
     margin-bottom: 40px;
     text-align: center;
 }
 
+/* Carrossel */
 .carousel {
-    width: 100%;
-    max-width: 400px;
+    width: 90%;
+    max-width: 600px;
     margin: 0 auto;
     overflow: hidden;
     position: relative;
@@ -46,28 +47,10 @@ body {
 .carousel-images img {
     width: 100%;
     height: auto;
+    max-height: 300px;
     object-fit: cover;
     border-radius: 10px;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .carousel {
-        max-width: 300px;
-    }
-
-    .header {
-        font-size: 18px;
-        padding: 15px;
-    }
-
-    h2 {
-        font-size: 20px;
-    }
-
-    button {
-        font-size: 14px;
-    }
+    margin-right: 10px;
 }
 
 /* Balões */
@@ -95,23 +78,7 @@ body {
     100% { transform: translateY(-10vh) translateX(50px); opacity: 0.5; }
 }
 
-.heart {
-    width: 50px;
-    height: 50px;
-    background: pink;
-    clip-path: polygon(50% 0%, 100% 50%, 75% 100%, 50% 75%, 25% 100%, 0% 50%);
-    animation: bounce 1s infinite;
-}
-
-@keyframes bounce {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-}
-
+/* Botões */
 button {
     margin: 10px;
     padding: 10px 20px;
@@ -128,10 +95,26 @@ button:hover {
     background: #ff3366;
 }
 
+/* Footer */
 .footer {
     text-align: center;
     padding: 10px;
     background: rgba(255, 153, 204, 0.9);
     color: white;
     border-radius: 20px 20px 0 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .carousel {
+        max-width: 100%;
+    }
+
+    .carousel-images img {
+        max-height: 200px;
+    }
+
+    button {
+        font-size: 14px;
+    }
 }

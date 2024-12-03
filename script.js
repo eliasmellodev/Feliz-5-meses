@@ -8,8 +8,8 @@ const totalImages = images.length;
 function showNextImage() {
     const carousel = document.querySelector(".carousel-images");
     currentIndex = (currentIndex + 1) % totalImages;
-    const offset = -currentIndex * 320; // 300px da largura + 20px de margem
-    carousel.style.transform = `translateX(${offset}px)`;
+    const offset = -currentIndex * 100; // Move proporcionalmente
+    carousel.style.transform = `translateX(${offset}%)`;
 }
 
 setInterval(showNextImage, 3000);
