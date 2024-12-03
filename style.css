@@ -3,7 +3,6 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    overflow: hidden;
     background: linear-gradient(90deg, #ff7eb3, #ffc3a0);
     animation: gradient-animation 10s infinite;
     color: #333;
@@ -24,19 +23,17 @@ body {
 }
 
 .text-section, .photos-carousel, .buttons-section {
-    margin-bottom: 40px;
+    margin: 20px auto;
     text-align: center;
+    max-width: 90%;
 }
 
-/* Carrossel */
 .carousel {
-    width: 90%;
+    width: 100%;
     max-width: 600px;
     margin: 0 auto;
     overflow: hidden;
-    position: relative;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .carousel-images {
@@ -49,8 +46,29 @@ body {
     height: auto;
     max-height: 300px;
     object-fit: cover;
-    border-radius: 10px;
-    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.button-section button {
+    margin: 10px;
+    padding: 10px 20px;
+    background: #ff6699;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff3366;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 153, 204, 0.9);
+    color: white;
 }
 
 /* Balões */
@@ -66,55 +84,21 @@ body {
 
 .balloon {
     position: absolute;
-    width: 50px;
-    height: 80px;
+    width: 40px;
+    height: 60px;
     background: radial-gradient(circle, #ff6666, #ff0000);
     border-radius: 50%;
     animation: float 10s infinite;
 }
 
 @keyframes float {
-    0% { transform: translateY(100vh) translateX(0); opacity: 1; }
-    100% { transform: translateY(-10vh) translateX(50px); opacity: 0.5; }
-}
-
-/* Botões */
-button {
-    margin: 10px;
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    background: #ff6699;
-    color: white;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-button:hover {
-    background: #ff3366;
-}
-
-/* Footer */
-.footer {
-    text-align: center;
-    padding: 10px;
-    background: rgba(255, 153, 204, 0.9);
-    color: white;
-    border-radius: 20px 20px 0 0;
+    0% { transform: translateY(100vh); opacity: 1; }
+    100% { transform: translateY(-10vh); opacity: 0.5; }
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
-    .carousel {
-        max-width: 100%;
-    }
-
     .carousel-images img {
         max-height: 200px;
-    }
-
-    button {
-        font-size: 14px;
     }
 }
