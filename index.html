@@ -46,19 +46,12 @@
             font-size: 1.3em;
             color: #ff1493;
             margin-top: 20px;
-            opacity: 0;
-            transform: translateY(-30px);
-            animation: fadeInText 3s ease-in-out forwards, slideDown 3s ease-in-out forwards;
+            animation: fadeInText 3s ease-in-out forwards;
         }
 
         @keyframes fadeInText {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
-        }
-
-        @keyframes slideDown {
-            0% { transform: translateY(-30px); }
-            100% { transform: translateY(0); }
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
         }
 
         .fireworks, .balloons-container {
@@ -78,13 +71,13 @@
             height: 70px;
             background-color: red;
             border-radius: 50%;
-            animation: floatDown 7s linear infinite;
+            animation: float 7s linear infinite;
             transform: rotate(45deg);
         }
 
-        @keyframes floatDown {
+        @keyframes float {
             0% { transform: translateY(0) rotate(0); opacity: 1; }
-            100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+            100% { transform: translateY(-110vh) rotate(360deg); opacity: 0; }
         }
 
         .slideshow {
@@ -171,20 +164,6 @@
             height: auto;
             border-radius: 10px;
         }
-
-        .firework {
-            position: absolute;
-            width: 10px;
-            height: 10px;
-            background-color: #ff1493;
-            border-radius: 50%;
-            animation: explode 1s linear forwards;
-        }
-
-        @keyframes explode {
-            0% { transform: scale(1); opacity: 1; }
-            100% { transform: scale(10); opacity: 0; }
-        }
     </style>
 </head>
 <body>
@@ -210,8 +189,8 @@
             <img src="images/foto6.jpg" alt="Foto 6">
         </div>
 
-        <p>Obrigado por estar ao meu lado. Cada momento com você é especial. ❤️🥰😍😍😍🥰🥰🥰</p>
-        <button id="loveButton">Clique aqui, meu denguinho!❤️</button>
+        <p>Obrigado por estar ao meu lado. Cada momento com você é especial. <BR></BR>❤️🥰😍😍😍🥰🥰🥰</p>
+        <button id="loveButton">Clica aqui <br>Meu denguinho!❤️</button>
 
         <div class="video-container">
             <video id="myVideo" controls autoplay>
@@ -223,41 +202,36 @@
         <div class="romantic-text" id="romanticText">
             <p>Denguinho, cinco meses já se passaram, e foi tudo tão rápido que parece que foi ontem que começamos essa jornada juntos. Cada instante ao seu lado tem sido único, cheio de amor e significado, e sinto que o tempo voa quando estou com você. 
                 <br><br>
-                Você é minha paz, meu refúgio, meu grande amor, e a cada dia me apaixono mais pela mulher incrível que você é. Eu te amo além do que qualquer palavra pode expressar!</p>
+                Você é minha paz, meu refúgio, meu grande amor, e a cada dia me apaixono mais pela mulher incrível que você é. Quero que você se sinta amada e especial, porque é isso que você é para mim: a pessoa que deu sentido à minha vida. 
+                <br><br>
+                Obrigado por me deixar fazer parte do seu mundo e por sermos nós. Eu te amo além do que qualquer palavra pode expressar, e espero que consiga sentir todo esse amor em cada gesto meu. Você é o meu maior presente e sempre será. ❤❤❤😍🥰
+                </p>
         </div>
     </div>
 
     <script>
         const loveButton = document.getElementById('loveButton');
         const romanticText = document.getElementById('romanticText');
-        const fireworksContainer = document.createElement('div');
-        fireworksContainer.className = 'fireworks';
-        document.body.appendChild(fireworksContainer);
+        const video = document.getElementById('myVideo');
+        const fireworks = document.createElement('div');
+        fireworks.classList.add('fireworks');
+        document.body.appendChild(fireworks);
 
         loveButton.addEventListener('click', () => {
+            alert('❤️🥰❤️🥰❤️🥰❤️🥰❤️🥰Eu te amo, muitoooooooooo!❤️🥰❤️🥰❤️🥰❤️🥰❤️🥰(OLHA LÁ EM BAIXO AGORA!❤️🥰❤️🥰❤️🥰❤️🥰❤️🥰)');
             romanticText.style.display = 'block';
-            triggerFireworks();
+            displayFireworks();
         });
 
-        function triggerFireworks() {
-            for (let i = 0; i < 50; i++) {
-                const firework = document.createElement('div');
-                firework.classList.add('firework');
-                firework.style.left = `${Math.random() * 100}%`;
-                firework.style.top = `${Math.random() * 100}%`;
-                fireworksContainer.appendChild(firework);
-                setTimeout(() => firework.remove(), 1000);
-            }
-
-            fireworksContainer.style.display = 'block';
-            setTimeout(() => fireworksContainer.style.display = 'none', 4000);
-        }
-
         window.onload = () => {
-            const video = document.getElementById('myVideo');
-            video.currentTime = 13;
-            video.play();
-        };
+    video.play();
+};
+      
+
+        function displayFireworks() {
+            fireworks.style.display = 'block';
+            setTimeout(() => fireworks.style.display = 'none', 5000);  // Duração dos fogos
+        }
     </script>
 </body>
 </html>
